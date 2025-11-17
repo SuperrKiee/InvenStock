@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0f915af9-5975-46b5-80e8-c3fbf3a829c0">
+	<property name="ireport.zoom" value="1.2100000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from produk]]>
+	</queryString>
+	<field name="id_produk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_produk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="satuan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_kategori" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="162" y="16" width="251" height="48" uuid="33927070-eb42-48a8-b4be-f34de6d159f1"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Produk]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+    <band height="20" splitType="Stretch">
+        <textField>
+            <reportElement x="16" y="0" width="100" height="20" uuid="17e4e8b7-cf8e-4a85-8591-84cb883d0f54"/>
+            <textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+        </textField>
+        <textField>
+            <reportElement x="116" y="0" width="100" height="20" uuid="aafbfe4e-4c38-4cb9-977d-6bd809482c9d"/>
+            <textFieldExpression><![CDATA[$F{id_produk}]]></textFieldExpression>
+        </textField>
+        <textField>
+            <reportElement x="216" y="0" width="100" height="20" uuid="2dee4643-4e44-45de-b117-9d33d2b6aeb0"/>
+            <textFieldExpression><![CDATA[$F{nama_produk}]]></textFieldExpression>
+        </textField>
+        <!-- Tambahkan textField untuk kolom harga -->
+        <textField>
+            <reportElement x="316" y="0" width="100" height="20" uuid="your-uuid-for-harga"/>
+            <textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+        </textField>
+        <!-- Tambahkan textField untuk kolom stok -->
+        <textField>
+            <reportElement x="416" y="0" width="100" height="20" uuid="your-uuid-for-stok"/>
+            <textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
+        </textField>
+        <!-- Tambahkan textField untuk kolom satuan -->
+        <textField>
+            <reportElement x="516" y="0" width="100" height="20" uuid="your-uuid-for-satuan"/>
+            <textFieldExpression><![CDATA[$F{satuan}]]></textFieldExpression>
+        </textField>
+        <!-- Tambahkan textField untuk kolom id_kategori -->
+        <textField>
+            <reportElement x="616" y="0" width="100" height="20" uuid="your-uuid-for-id_kategori"/>
+            <textFieldExpression><![CDATA[$F{id_kategori}]]></textFieldExpression>
+        </textField>
+    </band>
+</detail>
+
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
