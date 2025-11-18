@@ -285,7 +285,6 @@ public class LoginForm extends javax.swing.JFrame {
             if (imgURL != null) {
                 ImageIcon icon = new ImageIcon(imgURL);
                 Image img = icon.getImage();
-                // Mengubah ukuran gambar secara paksa
                 Image resizedImg = img.getScaledInstance(width, height, java.awt.Image.SCALE_SMOOTH); 
                 return new ImageIcon(resizedImg);
             } else {
